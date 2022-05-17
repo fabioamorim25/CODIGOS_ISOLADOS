@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>alterar dados ou adicionar em um coleção do database</title>
+
+</head>
+
+<body>
+    <!-- -----------------------------------------------------estrutura de codigo visto na pasta anterior: conectar o projeto com o banco de dados do firebase--------->
+    <!-- 2° PARTE:copiar o codigo da biblioteca do firebase e colocar aqui-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- 1° PARTE: criar um arquivo javascript interno no html / depois copiar o codigo firebaseConfig do tipo npm e colocar aqui   -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-dYTiaxwADWUOu69B7jZC4_qmBz7pLSU",
+            authDomain: "projeto-teste-e5a52.firebaseapp.com",
+            projectId: "projeto-teste-e5a52",
+            storageBucket: "projeto-teste-e5a52.appspot.com",
+            messagingSenderId: "186244678707",
+            appId: "1:186244678707:web:7dc03f5de5505bf9bfcf46",
+            measurementId: "G-GNESNWR3RM"
+        };
+        //3° PARTE:copiar o codigo de Inicializar o Cloud Firestore
+        firebase.initializeApp(firebaseConfig);
+     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
+     // ler todos os dados de uma coleção do banco de dados (usado para ambos os metodos abaixo)
+     let bancoDados = firebase.firestore(); // criar uma variavel onde sera atribuido o firebase e um metodo que retorna uma referencia para o banco de dados [o metodo é o .farestore()]  
+
+
+
+
+                //[ PARA FAZER UM DOS METODOS FUNCIONAR DEVE COLOCAR UM DOS METODOS COMO COMENTARIO]
+
+
+     //-1° METODO: ALTERAR UM DADO JÁ EXISTENTE NUMA COLEÇÃO NO DATABASE------------------------------
+     // alterar apenas o nome da coleção .collection("alunos") ; o nome do id do elemento ; colocar o nome da chave que ja existe e altera o valor dela [nome:"fabio"]     
+        bancoDados.collection("alunos").doc("iu5mSPKYb5EsTIaDAIFY").update({
+
+            nome: "fabio"
+
+
+        }).then(() => {
+            //mostra uma mensagem que já foram criado os dados
+            console.log("documento alterado com sucesso:")
+        }).Catch((err) => {
+            //Caso de algum erro vai ser mostrado uma mensagem para o usuário
+            console.log(err)
+        }) 
+     //-----------------------------------------------------------------------------------------------
+
+
+     //-1° METODO: ADICIONAR UM NOVO CAMPO DENTRO DE UMA COLEÇÃO JÁ EXISTENTE NO DATABASE-------------     
+     // alterar apenas o nome da coleção .collection("alunos") ; o nome do id do elemento ; criar uma chave e um valor para achave 
+     bancoDados.collection("alunos").doc("iu5mSPKYb5EsTIaDAIFY").update({
+
+           sobrenome: "amorim" ,
+           idade: 25 , 
+           cidade:[ "beberibe", "fortaleza", "cascavel" ]
+
+
+        }).then(() => {
+            //mostra uma mensagem que já foram criado os dados
+            console.log("documento alterado com sucesso:")
+        }).Catch((err) => {
+            //Caso de algum erro vai ser mostrado uma mensagem para o usuário
+            console.log(err)
+        })
+     //-----------------------------------------------------------------------------------------------
+    </script>
+
+
+
+
+    <link rel="stylesheet" href="./script-3.js">
+</body>
+
+
+</html>
