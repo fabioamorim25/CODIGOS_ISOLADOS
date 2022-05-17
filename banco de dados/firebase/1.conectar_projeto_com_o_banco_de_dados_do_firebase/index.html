@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>conectar um projeto web com o database do firebase</title>
+
+</head>
+<body>
+    
+    <!-- 2° PARTE:copiar o codigo da biblioteca do firebase e colocar aqui   -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <!-- 1° PARTE: criar um arquivo javascript interno no html / depois copiar o codigo firebaseConfig do tipo npm e colocar aqui   -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-dYTiaxwADWUOu69B7jZC4_qmBz7pLSU",
+            authDomain: "projeto-teste-e5a52.firebaseapp.com",
+            projectId: "projeto-teste-e5a52",
+            storageBucket: "projeto-teste-e5a52.appspot.com",
+            messagingSenderId: "186244678707",
+            appId: "1:186244678707:web:7dc03f5de5505bf9bfcf46",
+            measurementId: "G-GNESNWR3RM"
+        };
+
+        //3° PARTE:copiar o codigo de Inicializar o Cloud Firestore
+        firebase.initializeApp(firebaseConfig)
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="./script-3.js">
+</body>
+
+</html>

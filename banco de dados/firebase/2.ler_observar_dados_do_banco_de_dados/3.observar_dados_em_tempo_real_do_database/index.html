@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Ler e selecionar um dado especifico do banco de dados do firebase (sem precisar ter a referência "id" do
+        dado)</title>
+
+</head>
+
+<body>
+    <!-- -----------------------------------------------------estrutura de codigo visto na pasta anterior: conectar o projeto com o banco de dados do firebase--------->
+    <!-- 2° PARTE:copiar o codigo da biblioteca do firebase e colocar aqui-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- 1° PARTE: criar um arquivo javascript interno no html / depois copiar o codigo firebaseConfig do tipo npm e colocar aqui   -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-dYTiaxwADWUOu69B7jZC4_qmBz7pLSU",
+            authDomain: "projeto-teste-e5a52.firebaseapp.com",
+            projectId: "projeto-teste-e5a52",
+            storageBucket: "projeto-teste-e5a52.appspot.com",
+            messagingSenderId: "186244678707",
+            appId: "1:186244678707:web:7dc03f5de5505bf9bfcf46",
+            measurementId: "G-GNESNWR3RM"
+        };
+        //3° PARTE:copiar o codigo de Inicializar o Cloud Firestore
+        firebase.initializeApp(firebaseConfig);
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // ler todos os dados de uma coleção do banco de dados
+        let bancoDados = firebase.firestore(); // criar uma variavel onde sera atribuido o firebase e um metodo que retorna uma referencia para o banco de dados [o metodo é o .farestore()]  
+
+        //[PARA UTILIZAR O CODIGO NORMALMENTE DEVE COMENTAR UM DOS METODOS ABAIXO]
+
+        //1° METODO: OBSERVAR AS ATUALIZAÇÕES DE QUALQUER DADO DENTRO DE UMA COLEÇÃO---
+        //altera apenas: o nome da coleção .collection("observar_dados") ; e a função a ser executada caso queira gera outro ação quando for atualizado um dado
+        bancoDados.collection("observar_dados").onSnapshot ((snapshot)=>{
+
+         //função a ser executada quando ouver atualização da coleção 
+         snapshot.forEach((doc)=>{
+            let aluno= doc.data();
+            console.log(aluno);
+         })
+
+        })
+        //------------------------------------------------------------------------------
+
+
+
+
+        //2° METODO: OBSERVAR AS ATUALIZAÇÕES DE QUALQUER DADO DENTRO DE UMA COLEÇÃO---
+        //altera apenas: o nome da coleção .collection("observar_dados") ; e a função a ser executada caso queira gera outro ação quando for atualizado um dado
+
+        //variavel de referencia. usada para setar qual e o dado a ser observado
+        let documento_referencia = bancoDados.collection("observar_dados").doc("GZsvUlTgG8uXTltDrgwL");
+
+    
+            //função a ser executada quando ouver atualização da coleção 
+            documento_referencia.onSnapshot((doc) => {
+                let aluno = doc.data();
+                console.log(aluno);// mostra o que foi atualizado no dado observado
+            })
+
+       
+       //------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="./script-3.js">
+</body>
+
+
+</html>
