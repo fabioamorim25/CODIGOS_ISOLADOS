@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>verificar se tem algum usuario logado no sistema</title>
+
+</head>
+
+<body>
+    <!-- -----------------------------------------------------estrutura de codigo visto na pasta anterior: conectar o projeto com o banco de dados do firebase--------->
+    <!-- 2° PARTE:copiar o codigo da biblioteca do firebase e colocar aqui-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+        <!-- adicionar um script para acessar as autenticações do firebase------------------>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <!-- ------------------------------------------------------------------------------>
+
+    <!-- 1° PARTE: criar um arquivo javascript interno no html / depois copiar o codigo firebaseConfig do tipo npm e colocar aqui   -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-dYTiaxwADWUOu69B7jZC4_qmBz7pLSU",
+            authDomain: "projeto-teste-e5a52.firebaseapp.com",
+            projectId: "projeto-teste-e5a52",
+            storageBucket: "projeto-teste-e5a52.appspot.com",
+            messagingSenderId: "186244678707",
+            appId: "1:186244678707:web:7dc03f5de5505bf9bfcf46",
+            measurementId: "G-GNESNWR3RM"
+        };
+        //3° PARTE:copiar o codigo de Inicializar o Cloud Firestore
+        firebase.initializeApp(firebaseConfig);
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------     
+        
+        
+        
+        // ler todos os dados de uma coleção do banco de dados
+        let bancoDados = firebase.firestore(); // criar uma variavel onde sera atribuido o firebase e um metodo que retorna uma referencia para o banco de dados [o metodo é o .farestore()]  
+
+
+        //chamar um método de cria usuários no firebase
+        let autenticacao = firebase.auth();
+
+
+
+       //gera um observador para um usuario. verificando sempre o estado do usuario se esta logado ou não
+        autenticacao.onAuthStateChanged(user => {
+
+            if (user) {
+                console.log(user)
+            } else {
+                console.log("Ninguém logado no sistema")
+            }
+        })
+
+
+    </script>
+
+
+
+    <link rel="stylesheet" href="./script-3.js">
+</body>
+
+
+</html>
