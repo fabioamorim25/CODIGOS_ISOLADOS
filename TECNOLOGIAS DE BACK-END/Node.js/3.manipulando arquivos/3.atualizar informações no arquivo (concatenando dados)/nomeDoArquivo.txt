@@ -1,0 +1,1 @@
+texto que vai ser escrito no arquivo txt criado
