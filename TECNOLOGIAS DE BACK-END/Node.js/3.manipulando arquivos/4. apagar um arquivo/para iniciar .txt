@@ -1,0 +1,7 @@
+comando para iniciar o sistema: 'iniciar o node.js'
+
+
+digita no terminal do vscode ou no Cmder ....
+
+             node scripts.js 
+
