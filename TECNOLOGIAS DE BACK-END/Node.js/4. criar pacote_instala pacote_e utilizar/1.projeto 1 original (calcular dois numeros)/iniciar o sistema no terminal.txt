@@ -1,0 +1,10 @@
+
+[node scriptPacote.js]   [digita a operação]   [valor1]  [valor2]
+
+
+* SOMAR DOIS NÚMEROS:
+node scriptPacote.js    soma   1   1
+
+
+* MULTIPLICAR DOIS NÚMEROS:
+node scriptPacote.js    mult   1   1
