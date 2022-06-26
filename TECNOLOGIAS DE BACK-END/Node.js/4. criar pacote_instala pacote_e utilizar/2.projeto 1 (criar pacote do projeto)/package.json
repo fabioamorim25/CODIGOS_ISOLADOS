@@ -1,0 +1,11 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "pacote criado apartir do projeto 1. onde é possivel calcular soma e multiplicação entre dois numeros",
+  "main": "scriptPacote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fabio amorim",
+  "license": "ISC"
+}
