@@ -1,0 +1,15 @@
+{
+  "name": "projeto2",
+  "version": "1.0.0",
+  "description": "o projeto 2 vai ser usado para instalar o pacote criado apartir do projeto 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fabio amorim",
+  "license": "ISC",
+  "dependencies": {
+    "calculadora": "file:../2.projeto 1 (criar pacote do projeto)",
+    "projeto2": "file:../3.projeto 2 (instalarção do pacote projeto 1)"
+  }
+}
