@@ -1,0 +1,23 @@
+=======================================
+  VER O QUE O SERVIDOR ESTÁ RESPONDENDO:
+     (ir no google e pesquisar por)
+
+    [Localhost: número da porta]
+              Exemplo
+          [Localhost:3000]
+======================================
+  
+
+
+
+
+
+- ABRIR/INICIAR O SERVIDOR: (digitar no terminal)	
+	
+      Node nomeDoApp.js	
+	[node app.js]
+
+- FECHAR O SERVIDOR: (digitar no terminal)
+fecha o servidor toda vez que fizer uma alteração no codigo
+
+          [ [Ctrl] [C] ]
