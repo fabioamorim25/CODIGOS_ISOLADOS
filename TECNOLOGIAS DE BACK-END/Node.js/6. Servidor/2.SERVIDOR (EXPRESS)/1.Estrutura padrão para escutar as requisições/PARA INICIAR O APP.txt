@@ -1,0 +1,12 @@
+DIGITAR NO TERMINAL:
+   [ node app.js]
+
+
+IR NO NAVEGADOR E DIGITAR O ENDEREÇO:
+
+    [localhost:5000]
+
+
+
+obs: não vai aparecer nada é apenas para ver como e a estrutura 
+para escutar requisições dos metodos get, post, put, delete 
