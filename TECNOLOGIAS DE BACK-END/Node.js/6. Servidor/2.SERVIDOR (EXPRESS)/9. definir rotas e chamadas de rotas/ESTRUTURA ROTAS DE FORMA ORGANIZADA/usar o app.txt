@@ -1,0 +1,19 @@
+INICIAR O SISTEMA USANDO O TERMINAL [node app.js]
+ENTRA NO APLICATIVO INSOMNIA [colocar num requisição get e digitar o endereço desejado] 
+
+PELO INSOMNIA:
+- acessar o endereço da primeira rota (mostra apenas uma mensagem na tela)
+   [localhost:8080/]
+
+- acessar o endereço da segunda rota (mostra um objeto json com todos os elementos contidos no sistema)
+   [localhost:8080/api/nomeDaRota]
+
+- acessar o endereço da terceira rota (mostra um determinado dado apartir do id colocado junto com o endereço e sera mostrado o elemento escolhido apartir do id)
+   [localhost:8080/api/rotaParaTrazerUmDadoEspecifico/0] ou [localhost:8080/api/rotaParaTrazerUmDadoEspecifico/1] ...
+
+---------------------------
+sera mostrado os elementos
+{id:0,nome:"jose"}
+{id:1,nome:"maria"}
+{id:3,nome:"joão"}
+--------------------------
