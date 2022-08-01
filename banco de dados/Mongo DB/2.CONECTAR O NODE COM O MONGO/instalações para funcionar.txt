@@ -1,0 +1,9 @@
+no terminal:
+
+instalar o express [npm install express]
+instalar o mongoose [npm install mongoose]
+
+
+
+
+iniciar o sistema: [node app.js]
