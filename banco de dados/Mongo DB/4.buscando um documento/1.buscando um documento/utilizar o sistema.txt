@@ -1,0 +1,29 @@
+no terminal:
+
+instalar o express [npm install express]
+instalar o mongoose [npm install mongoose]
+
+
+
+=================================
+iniciar o sistema: [node app.js]
+=================================
+
+
+
+no mongo db:
+* um banco com o nome [projetoTeste]
+
+* deve ter uma coleção chamada [nomecolecaos] com um arquivo com os dados abaixo:
+___________________________________
+title:"documentoTeste"
+description:"teste de um documento"
+url:"https://instagram.com"
+click:0
+___________________________________
+
+
+no navegador. para mostra os dados:
+=================
+localhost:3000/nomecolecaos
+=================
